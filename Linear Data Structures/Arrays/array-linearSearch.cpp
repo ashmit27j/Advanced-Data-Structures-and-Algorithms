@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n;
+    int n,s;
     cout<<"Enter the size of the array: ";
     cin>>n;
     int arr[n];
@@ -11,9 +11,14 @@ int main()
     {
         cin>>arr[i];
     }
-    cout<<"The elements of the array are: ";
+    cout<<"Enter element to search: ";
+    cin>>s;
     for(int i=0;i<n;i++)
     {
-        cout<<arr[i]<<" ";
+        if(arr[i]==s)
+        {
+            cout<<"Element found at index "<<i;
+            return 0;
+        }
     }
 }
